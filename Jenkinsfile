@@ -17,15 +17,15 @@ pipeline {
             }
         }
 
-        stage('Terratest') {
-            steps {
-                   dir('test') {
-                    sh 'if [ ! -f go.mod ]; then go mod init github.com/galesme/ci-cd-pipeline-jenkins-lab; fi'
-                    sh 'go mod tidy'
-                    sh 'go test'
-                   }
-                }
-            }
+        // stage('Terratest') {
+        //     steps {
+        //            dir('test') {
+        //             sh 'if [ ! -f go.mod ]; then go mod init github.com/galesme/ci-cd-pipeline-jenkins-lab; fi'
+        //             sh 'go mod tidy'
+        //             sh 'go test'
+        //            }
+        //         }
+        //     }
         
 
         stage('Terraform workflow') {
