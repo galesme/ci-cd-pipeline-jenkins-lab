@@ -20,7 +20,7 @@ pipeline {
         stage('Terratest') {
             steps {
                    dir('test') {
-                    sh 'if [ ! -f go.mod ]; then go mod init github.com/palakbhawsar98/Terraform-CI-CD-Pipeline; fi'
+                    sh 'if [ ! -f go.mod ]; then go mod init https://github.com/galesme/ci-cd-pipeline-jenkins-lab; fi'
                     sh 'go mod tidy'
                     sh 'go test'
                    }
